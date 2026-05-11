@@ -146,7 +146,16 @@ document.getElementById("productsContainer");
 
 let output = "";
 
+/* WHATSAPP NUMBER */
+const whatsappNumber = "2349068666520";
+
 products.forEach((product) => {
+
+const message =
+`Hello, I want to buy ${product.name} for ${product.price}`;
+
+const whatsappLink =
+`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 output += `
 
@@ -161,6 +170,10 @@ output += `
 <p>${product.description}</p>
 
 <div class="price">${product.price}</div>
+
+<a href="${whatsappLink}" target="_blank" class="buy-btn">
+Buy
+</a>
 
 </div>
 
